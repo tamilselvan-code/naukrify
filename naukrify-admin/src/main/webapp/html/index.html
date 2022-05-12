@@ -22,7 +22,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="#" onclick="return changeView(event, 'dashboardView')">
+                    <a href="#" onclick="changeView(event, 'dashboardView')">
                         <span class="icon">
                             <ion-icon name="desktop-outline"></ion-icon>
                         </span>
@@ -30,7 +30,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="#" onclick="return changeView(event, 'universityView')">
+                    <a href="#" onclick="changeView(event, 'universityView')">
                         <span class="icon">
                             <ion-icon name="ribbon-outline"></ion-icon>
                         </span>
@@ -38,7 +38,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="#" onclick="return changeView(event, 'collegeView')">
+                    <a href="#" onclick="changeView(event, 'collegeView')">
                         <span class="icon">
                             <ion-icon name="book-outline"></ion-icon>
                         </span>
@@ -46,7 +46,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="#" onclick="return changeView(event, 'studentView')">
+                    <a href="#" onclick="changeView(event, 'studentView')">
                         <span class="icon">
                             <ion-icon name="people-outline"></ion-icon>
                         </span>
@@ -54,7 +54,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="#" onclick="return changeView(event, 'companyView')">
+                    <a href="#" onclick="changeView(event, 'companyView')">
                         <span class="icon">
                             <ion-icon name="business-outline"></ion-icon>
                         </span>
@@ -62,7 +62,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="#" onclick="return changeView(event, 'sessionView')">
+                    <a href="#" onclick="changeView(event, 'sessionView')">
                         <span class="icon">
                             <ion-icon name="caret-forward-circle-outline"></ion-icon>
                         </span>
@@ -70,7 +70,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="#" onclick="return changeView(event, 'testView')">
+                    <a href="#" onclick="changeView(event, 'testView')">
                         <span class="icon">
                             <ion-icon name="clipboard-outline"></ion-icon>
                         </span>
@@ -78,7 +78,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="#" onclick="return changeView(event, 'passwordView')">
+                    <a href="#" onclick="changeView(event, 'passwordView')">
                         <span class="icon">
                             <ion-icon name="lock-closed-outline"></ion-icon>
                         </span>
@@ -251,11 +251,18 @@
             //show the selected view
             let currentView = document.getElementById(viewName);
             currentView.style.display = "block";
-            return false;
+            
         }
 
         $(document).ready(function(){
             console.log("document is ready...")
+            //show the dashboard on window load
+            let dashboardView = document.getElementById('dashboardView');
+            dashboardView.style.display = "block";
+
+            //select the Dashboard menu on window load
+            let list = document.querySelectorAll('.navigation li');
+            list.item(1).classList.add('hovered');
         })
     </script>
 </body>

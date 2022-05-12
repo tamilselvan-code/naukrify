@@ -152,7 +152,6 @@ body{
 
 .viewHeader
 {
-
     display: grid;
     grid-template-columns: 5fr 3fr;
 }
@@ -199,8 +198,6 @@ body{
     border-radius: 20px;
 }
 
-
-
 .cardHeader
 {
     display: flex;
@@ -214,7 +211,69 @@ body{
     color: var(--blue);
 }
 
-.btn
+.cards
+{
+    position: relative;
+    width: 100%;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.cardBox
+{
+    position: relative;
+    width: 100%;
+    padding: 10px;
+}
+
+.cardBox .card
+{
+    position: relative;
+    background: var(--white);
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 7px 25px rgba(0,0,0,0.08);
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.cardBox .card .numbers
+{
+    position: relative;
+    font-weight: 500;
+    font-size: 2.5em;
+    color: var(--blue);
+}
+
+.cardBox .card .cardName
+{
+    color: var(--black2);
+    font-size: 1.1em;
+    margin-top: 5px;
+}
+
+.cardBox .card .iconBx
+{
+    font-size: 5em;
+    color: var(--black2);
+    padding-left: 10px;
+}
+
+.cardBox .card:hover
+{
+    background: var(--blue);
+}
+
+.cardBox .card:hover .numbers,
+.cardBox .card:hover .cardName,
+.cardBox .card:hover .iconBx
+{
+    color: var(--white);
+}
+
+.button
 {
     position: relative;
     padding: 5px 10px;
@@ -223,6 +282,7 @@ body{
     color: var(--white);
     border-radius: 6px;
 }
+
 
 .views table
 {
@@ -472,6 +532,11 @@ body{
     {
         left: 300px;
     }
+
+    .cards
+    {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
 @media(max-width: 768px)
@@ -479,6 +544,11 @@ body{
     .views
     {
         grid-template-columns: repeat(1, 1fr);
+    }
+
+    .viewHeader
+    {
+        grid-template-columns: repeat(2fr, 8fr);
     }
 
     .dashboard
@@ -494,6 +564,11 @@ body{
 
 @media(max-width: 768px)
 {
+    .cards
+    {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
     .cardHeader h2
     {
         font-size: 20px;

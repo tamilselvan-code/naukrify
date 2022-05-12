@@ -150,7 +150,13 @@ body{
     left: 80px;
 }
 
-.toggle
+.viewHeader
+{
+
+    display: grid;
+    grid-template-columns: 5fr 3fr;
+}
+.viewHeader .toggle
 {
     position: relative;
     width: 60px;
@@ -160,6 +166,14 @@ body{
     align-items: center;
     font-size: 2.5em;
     cursor: pointer;
+}
+
+.viewHeader .lastlogin
+{
+    color: var(--black2);
+    font-size: 20px;
+    justify-content: center;
+    padding-top: 20px;
 }
 
 .views

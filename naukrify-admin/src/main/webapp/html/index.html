@@ -239,7 +239,7 @@
             list.forEach((item) =>
                 item.classList.remove('hovered'));
 
-            // add hovered class in selected list item
+            // set the current menu item as selected
             event.currentTarget.parentNode.classList.add('hovered');
 
             //hide all views except the selected one
@@ -260,7 +260,7 @@
             let dashboardView = document.getElementById('dashboardView');
             dashboardView.style.display = "block";
 
-            //select the Dashboard menu on window load
+            //select the Dashboard menu item on window load
             let list = document.querySelectorAll('.navigation li');
             list.item(1).classList.add('hovered');
         })

@@ -6,6 +6,7 @@
     <title>Naukrify Admin</title>
     <link rel="icon" type="image/x-icon" href="favicon.ico">
     <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </head>
 
 <body>
@@ -99,8 +100,8 @@
             <div class="toggle">
                 <ion-icon name="menu-outline"></ion-icon>
             </div>
-            <!-- all details -->
-            <div id="dashboardView" class="details">
+            <!-- all views -->
+            <div id="dashboardView" class="views">
                 <!-- Dashboard -->
                 <div class="dashboard">
                     <div class="cardHeader">
@@ -151,7 +152,7 @@
                     </table>
                 </div>
         </div>
-        <div id="universityView" class="details">
+        <div id="universityView" class="views">
             <!-- Universities -->
             <div class="universities">
                 <div class="cardHeader">
@@ -160,7 +161,7 @@
                 </div>
             </div>
         </div>
-        <div id="collegeView" class="details">
+        <div id="collegeView" class="views">
             <!-- Colleges -->
             <div class="colleges">
                 <div class="cardHeader">
@@ -169,7 +170,7 @@
                 </div>
             </div>
         </div>
-        <div id="studentView" class="details">
+        <div id="studentView" class="views">
             <!-- Students -->
             <div class="students">
                 <div class="cardHeader">
@@ -178,7 +179,7 @@
                 </div>
             </div>
         </div>
-        <div id="companyView" class="details">
+        <div id="companyView" class="views">
             <!-- Companies -->
             <div class="companies">
                 <div class="cardHeader">
@@ -187,7 +188,7 @@
                 </div>
             </div>
         </div>
-        <div id="sessionView" class="details">
+        <div id="sessionView" class="views">
             <!-- Sessions -->
             <div class="sessions">
                 <div class="cardHeader">
@@ -196,7 +197,7 @@
                 </div>
             </div>
         </div>
-        <div id="testView" class="details">
+        <div id="testView" class="views">
             <!-- Tests -->
             <div class="tests">
                 <div class="cardHeader">
@@ -205,7 +206,7 @@
                 </div>
             </div>
         </div>
-        <div id="passwordView" class="details">
+        <div id="passwordView" class="views">
             <!-- Passwords -->
             <div class="passwords">
                 <div class="cardHeader">
@@ -242,16 +243,20 @@
             event.currentTarget.parentNode.classList.add('hovered');
 
             //hide all views except the selected one
-            let allDetails = document.getElementsByClassName('details');
-            for (i = 0; i < allDetails.length; i++) {
-                allDetails[i].style.display = "none";
+            let allViews = document.getElementsByClassName('views');
+            for (i = 0; i < allViews.length; i++) {
+                allViews[i].style.display = "none";
             }
             
             //show the selected view
-            let currentDetails = document.getElementById(viewName);
-            currentDetails.style.display = "block";
+            let currentView = document.getElementById(viewName);
+            currentView.style.display = "block";
             return false;
         }
+
+        $(document).ready(function(){
+            console.log("document is ready...")
+        })
     </script>
 </body>
 

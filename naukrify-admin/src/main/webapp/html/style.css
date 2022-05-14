@@ -279,7 +279,7 @@ body{
     color: var(--white);
 }
 
-.testCards
+.testViewCards
 {
     position: relative;
     width: 100%;
@@ -288,18 +288,21 @@ body{
     grid-template-columns: repeat(4, 1fr);
 }
 
-.testCardBox
+.testViewCardBox
 {
     position: relative;
     width: 100%;
-    padding: 10px;
+    padding-left: 10px ;
+    padding-right: 10px ;
+    padding-top: 10px ;
+    padding-bottom: 60px ;
 }
 
-.testCardBox .testCard
+.testViewCardBox .testViewCard
 {
     position: relative;
     background: var(--white);
-    padding: 30px;
+    padding: 10px;
     border-radius: 20px;
     box-shadow: 0 7px 25px rgba(0,0,0,0.08);
     display: flex;
@@ -307,21 +310,37 @@ body{
     cursor: pointer;
 }
 
-.testCardBox .testCard .testCardName
+.testViewCardBox .testViewCard .testViewCardName
 {
     color: var(--black2);
     font-size: 1.1em;
     margin-top: 5px;
 }
 
-.testCardBox .testCard:hover
+.testViewCardBox .testViewCard:hover .testViewCardMenu
 {
-    background: var(--blue);
+    display: block;
 }
 
-.testCardBox .testCard:hover .testCardName
+.testViewCardBox .testViewCard .testViewCardMenu
 {
-    color: var(--white);
+    padding-top: 10px;
+    display: block;
+}
+
+.testViewCardMenu .icons
+{
+    position: relative;
+    display: block;
+    min-width: 60px;
+    height: 60px;
+    line-height: 20px;
+    text-align: center;
+    color: var(--black2);
+}
+.testViewCardMenu .icons ion-icon
+{
+    font-size: 1.75em;
 }
 
 .button

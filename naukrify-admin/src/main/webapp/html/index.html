@@ -169,13 +169,23 @@
                     <h2>Tests</h2>
                     <p>Create, view, and manage your Screen tests</p>
                     <!-- cards -->
-                    <div class="testCards">
-                        <div class="testCardBox">
-                            <div class="testCard">
-                                <div>
-                                    <div class="testCardName">sample test</div>
+                    <div class="testViewCards">
+                        <div class="testViewCardBox">
+                            <div class="testViewCard">
+                                <div class="testViewCardName">sample test</div>
+                                <div class="testViewCardMenu">
+                                    <span class="icons">
+                                        <div>
+                                            <ion-icon name="document-text-outline"></ion-icon>
+                                        </div>
+                                        <div>
+                                            <ion-icon name="mail-outline"></ion-icon>
+                                        </div>
+                                        <div>
+                                            <ion-icon name="trash-outline"></ion-icon>
+                                        </div>
+                                    </span>
                                 </div>
-                                <div></div>
                             </div>
                         </div>
                     </div>
@@ -247,7 +257,7 @@
 
         
         function changeView(event, viewName) {
-            console.log("change content called")
+            console.log("change view called")
             
             // remove hovered from previously selected list item
             let list = document.querySelectorAll('.navigation li');

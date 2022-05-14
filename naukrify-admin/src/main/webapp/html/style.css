@@ -200,7 +200,7 @@ body{
 
 .cardHeader
 {
-    display: flex;
+    display: block;
     justify-content: space-between;
     align-items: flex-start;
 }
@@ -209,6 +209,12 @@ body{
 {
     font-weight: 600;
     color: var(--blue);
+}
+
+.cardHeader p
+{
+    padding-top: 10px;
+    color: var(--black2);
 }
 
 .cards
@@ -273,6 +279,51 @@ body{
     color: var(--white);
 }
 
+.testCards
+{
+    position: relative;
+    width: 100%;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.testCardBox
+{
+    position: relative;
+    width: 100%;
+    padding: 10px;
+}
+
+.testCardBox .testCard
+{
+    position: relative;
+    background: var(--white);
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 7px 25px rgba(0,0,0,0.08);
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.testCardBox .testCard .testCardName
+{
+    color: var(--black2);
+    font-size: 1.1em;
+    margin-top: 5px;
+}
+
+.testCardBox .testCard:hover
+{
+    background: var(--blue);
+}
+
+.testCardBox .testCard:hover .testCardName
+{
+    color: var(--white);
+}
+
 .button
 {
     position: relative;
@@ -333,7 +384,18 @@ body{
     text-align: center;
 }
 
-.views .universities, .views .students
+.views .tests
+{
+    position: relative;
+    display: grid;
+    min-height: 500px;
+    background: var(--white);
+    padding: 20px;
+    box-shadow: 0 7px 25px rgba(0,0,0,0.08);
+    border-radius: 20px;
+}
+
+.views .universities
 {
     position: relative;
     display: grid;
@@ -378,17 +440,6 @@ body{
 }
 
 .views .sessions
-{
-    position: relative;
-    display: grid;
-    min-height: 500px;
-    background: var(--white);
-    padding: 20px;
-    box-shadow: 0 7px 25px rgba(0,0,0,0.08);
-    border-radius: 20px;
-}
-
-.views .tests
 {
     position: relative;
     display: grid;

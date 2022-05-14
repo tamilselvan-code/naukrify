@@ -30,6 +30,14 @@
                     </a>
                 </li>
                 <li>
+                    <a href="#" onclick="changeView(event, 'testView')">
+                        <span class="icon">
+                            <ion-icon name="clipboard-outline"></ion-icon>
+                        </span>
+                        <span class="title">Tests</span>
+                    </a>
+                </li>
+                <li>
                     <a href="#" onclick="changeView(event, 'universityView')">
                         <span class="icon">
                             <ion-icon name="ribbon-outline"></ion-icon>
@@ -70,14 +78,6 @@
                     </a>
                 </li>
                 <li>
-                    <a href="#" onclick="changeView(event, 'testView')">
-                        <span class="icon">
-                            <ion-icon name="clipboard-outline"></ion-icon>
-                        </span>
-                        <span class="title">Tests</span>
-                    </a>
-                </li>
-                <li>
                     <a href="#" onclick="changeView(event, 'passwordView')">
                         <span class="icon">
                             <ion-icon name="lock-closed-outline"></ion-icon>
@@ -110,9 +110,9 @@
             <div id="dashboardView" class="views">
                 <!-- Dashboard -->
                 <div class="dashboard">
-                    <div class="cardHeader">
+                    <!-- <div class="cardHeader">
                         <h2>Dashboard</h2>
-                    </div>
+                    </div> -->
                     <!-- cards -->
                     <div class="cards">
                         <div class="cardBox">
@@ -162,6 +162,26 @@
                     </div>
                 </div>
         </div>
+        <div id="testView" class="views">
+            <!-- Tests -->
+            <div class="tests">
+                <div class="cardHeader">
+                    <h2>Tests</h2>
+                    <p>Create, view, and manage your Screen tests</p>
+                    <!-- cards -->
+                    <div class="testCards">
+                        <div class="testCardBox">
+                            <div class="testCard">
+                                <div>
+                                    <div class="testCardName">sample test</div>
+                                </div>
+                                <div></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
         <div id="universityView" class="views">
             <!-- Universities -->
             <div class="universities">
@@ -199,14 +219,6 @@
             <div class="sessions">
                 <div class="cardHeader">
                     <h2>Sessions</h2>
-                </div>
-            </div>
-        </div>
-        <div id="testView" class="views">
-            <!-- Tests -->
-            <div class="tests">
-                <div class="cardHeader">
-                    <h2>Tests</h2>
                 </div>
             </div>
         </div>

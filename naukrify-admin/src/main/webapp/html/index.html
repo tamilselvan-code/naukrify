@@ -165,30 +165,38 @@
         <div id="testView" class="views">
             <!-- Tests -->
             <div class="tests">
-                <div class="cardHeader">
-                    <h2>Tests</h2>
-                    <p>Create, view, and manage your Screen tests</p>
-                    <!-- cards -->
-                    <div class="testViewCards">
-                        <div class="testViewCardBox">
-                            <div class="testViewCard">
-                                <div class="testViewCardName">sample test</div>
-                                <div class="testViewCardMenu">
-                                    <span class="icons">
-                                        <div>
-                                            <ion-icon name="document-text-outline"></ion-icon>
-                                        </div>
-                                        <div>
-                                            <ion-icon name="mail-outline"></ion-icon>
-                                        </div>
-                                        <div>
-                                            <ion-icon name="trash-outline"></ion-icon>
-                                        </div>
-                                    </span>
+                <div class="testViewTabs">
+                    <a class="testViewTabLinks" href="#" onclick="changeTestViewTabcontent(event, 'testsTab')">Tests</a>
+                    <a class="testViewTabLinks" href="#" onclick="changeTestViewTabcontent(event, 'topicsTab')">Topics</a>
+                </div>
+                <div id="testsTab" class="testViewTabcontent">
+                    <div class="cardHeader">
+                        <p>Create, view, and manage your Screen tests</p>
+                        <!-- cards -->
+                        <div class="testViewCards">
+                            <div class="testViewCardBox">
+                                <div class="testViewCard">
+                                    <div class="testViewCardName">sample test</div>
+                                    <div class="testViewCardMenu">
+                                        <span class="icons">
+                                            <div>
+                                                <ion-icon name="document-text-outline"></ion-icon>
+                                            </div>
+                                            <div>
+                                                <ion-icon name="mail-outline"></ion-icon>
+                                            </div>
+                                            <!-- <div>
+                                                <ion-icon name="trash-outline"></ion-icon>
+                                            </div> -->
+                                        </span>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
+                </div>
+                <div id="topicsTab" class="testViewTabcontent">
+                    <p>Topics view</p>
                 </div>
             </div>
         </div>
@@ -277,6 +285,20 @@
             let currentView = document.getElementById(viewName);
             currentView.style.display = "block";
             
+        }
+
+        function changeTestViewTabcontent(event, tabName) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("testViewTabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName("testViewTabLinks");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+            document.getElementById(tabName).style.display = "block";
+            event.currentTarget.className += " active";
         }
 
         $(document).ready(function(){

@@ -279,6 +279,27 @@ body{
     color: var(--white);
 }
 
+.testViewTabs {
+    overflow: hidden;
+    background-color: var(--white);
+}
+  
+.testViewTabs a {
+    float: left;
+    display: block;
+    color: var(--black2);
+    text-align: center;
+    padding-bottom: 10px;
+    text-decoration: none;
+    font-size: 17px;
+    border-bottom: 3px solid transparent;
+    width: 50%;
+}
+
+.testViewTabs a.active {
+    border-bottom: 3px solid var(--blue);
+}
+
 .testViewCards
 {
     position: relative;

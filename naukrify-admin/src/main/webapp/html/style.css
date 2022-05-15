@@ -280,6 +280,7 @@ body{
 }
 
 .testViewTabs {
+    padding: 0;
     overflow: hidden;
     background-color: var(--white);
 }
@@ -296,8 +297,15 @@ body{
     width: 50%;
 }
 
-.testViewTabs a.active {
+.testViewTabs a.active 
+{
     border-bottom: 3px solid var(--blue);
+}
+
+.testViewTestsCardHeader p
+{
+    padding-top: 40px;
+    color: var(--black2);
 }
 
 .testViewCards
@@ -346,7 +354,7 @@ body{
 .testViewCardBox .testViewCard .testViewCardMenu
 {
     padding-top: 10px;
-    display: block;
+    display: none;
 }
 
 .testViewCardMenu .icons
@@ -427,7 +435,6 @@ body{
 .views .tests
 {
     position: relative;
-    display: grid;
     min-height: 500px;
     background: var(--white);
     padding: 20px;

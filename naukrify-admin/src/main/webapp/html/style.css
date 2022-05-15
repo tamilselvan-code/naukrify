@@ -217,7 +217,7 @@ body{
     color: var(--black2);
 }
 
-.cards
+.dashboardViewCards
 {
     position: relative;
     width: 100%;
@@ -226,14 +226,14 @@ body{
     grid-template-columns: repeat(4, 1fr);
 }
 
-.cardBox
+.dashboardViewCardBox
 {
     position: relative;
     width: 100%;
     padding: 10px;
 }
 
-.cardBox .card
+.dashboardViewCardBox .dashboardViewCard
 {
     position: relative;
     background: var(--white);
@@ -245,7 +245,7 @@ body{
     cursor: pointer;
 }
 
-.cardBox .card .numbers
+.dashboardViewCardBox .dashboardViewCard .numbers
 {
     position: relative;
     font-weight: 500;
@@ -253,28 +253,28 @@ body{
     color: var(--blue);
 }
 
-.cardBox .card .cardName
+.dashboardViewCardBox .dashboardViewCard .cardName
 {
     color: var(--black2);
     font-size: 1.1em;
     margin-top: 5px;
 }
 
-.cardBox .card .iconBx
+.dashboardViewCardBox .dashboardViewCard .dashboardViewIcon
 {
     font-size: 5em;
     color: var(--black2);
     padding-left: 10px;
 }
 
-.cardBox .card:hover
+.dashboardViewCardBox .dashboardViewCard:hover
 {
     background: var(--blue);
 }
 
-.cardBox .card:hover .numbers,
-.cardBox .card:hover .cardName,
-.cardBox .card:hover .iconBx
+.dashboardViewCardBox .dashboardViewCard:hover .numbers,
+.dashboardViewCardBox .dashboardViewCard:hover .cardName,
+.dashboardViewCardBox .dashboardViewCard:hover .dashboardViewIcon
 {
     color: var(--white);
 }

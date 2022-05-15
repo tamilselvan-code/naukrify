@@ -166,8 +166,8 @@
             <!-- Tests -->
             <div class="tests">
                 <div class="testViewTabs">
-                    <a class="testViewTabLinks" href="#" onclick="changeTestViewTabcontent(event, 'testsTab')">Tests</a>
-                    <a class="testViewTabLinks" href="#" onclick="changeTestViewTabcontent(event, 'topicsTab')">Topics</a>
+                    <a id="testsTabLink" class="testViewTabLinks" href="#" onclick="changeTestViewTabcontent(event, 'testsTab')">Tests</a>
+                    <a id="topicsTabLink" class="testViewTabLinks" href="#" onclick="changeTestViewTabcontent(event, 'topicsTab')">Topics</a>
                 </div>
                 <div id="testsTab" class="testViewTabcontent">
                     <div class="testViewTestsCardHeader">
@@ -301,15 +301,32 @@
             event.currentTarget.className += " active";
         }
 
+        function loadTestViewTabcontent(tabName, tabLinkId) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("testViewTabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName("testViewTabLinks");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+            document.getElementById(tabName).style.display = "block";
+            document.getElementById(tabLinkId).className += " active";
+        }
+
         $(document).ready(function(){
             console.log("document is ready...")
-            //show the dashboard on window load
+            //show the dashboard view on window load
             let dashboardView = document.getElementById('dashboardView');
             dashboardView.style.display = "block";
 
-            //select the Dashboard menu item on window load
+            //select the dashboard view default menu item on window load
             let list = document.querySelectorAll('.navigation li');
             list.item(1).classList.add('hovered');
+
+            //select the tests view default menu item on window load
+           loadTestViewTabcontent("testsTab", "testsTabLink");
         })
     </script>
 </body>
